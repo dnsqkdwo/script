@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>JS 연습</title>
+</head>
+<body>
+  <h1 id="message">안녕하세요!</h1>
+  <button onclick="changeMessage()">문장 바꾸기</button>
+
+  <script>
+    function changeMessage() {
+        const message = document.getElementById("message")
+
+        if(message.textContent === "안녕하세요!") {
+            message.textContent = "반갑습니다!"
+        } else {
+            message.textContent = "안녕하세요!"
+        }
+    }
+  </script>
+</body>
+</html>
