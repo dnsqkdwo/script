@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.todo-container {
+    width: 400px;
+    background-color: #ddd;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    margin: 0px auto;
+}
+
+h1 {
+    margin-bottom: 15px;
+}
+
+#inputfile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    gap: 10px;
+}
+
+#todoInput {
+    width: 200px;
+    border: 1px solid #eee;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+#todoInput:focus {
+    outline: none;
+}
+
+#addBtn {
+    width: 35px;
+    height: 35px;
+    border: none;
+    background-color: #242423;
+    border-radius: 4px;
+    cursor: pointer;
+    position: relative;
+}
+
+#addBtn span {
+    display: block;
+    width: 2px;
+    height: 15px;
+    background-color: #FFE8AD;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#addBtn span:last-child {
+    transform: translate(-50%, -50%) rotate(-90deg);
+}
+
+ul li {
+    list-style: none;
+}
