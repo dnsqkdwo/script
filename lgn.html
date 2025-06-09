@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>로그인</title>
+    <style>
+        #modal {
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: #aaa;
+            z-index: 999;
+        }
+
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+
+        .login {
+            width: 600px;
+            height: 370px;
+            margin: 0 auto;
+            margin-top: 130px;
+            background-color: white;
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .login > h2 {
+            text-align: center;
+            padding-top: 50px;
+        }
+
+        .Lp {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+            gap: 5px;
+            flex-direction: column;
+        }
+
+        .lp {
+            width: 400px;
+            height: 25px;
+            border-radius: 5px;
+            border: solid 2px #ccc;
+            padding: 10px;
+            font-size: 17px;
+        }
+
+        .lp:focus {
+            outline: none;
+            border: solid 2px #000;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        #lgn {
+            width: 450px;
+            height: 40px;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-top: 40px;
+            font-size: 20px;
+            border-radius: 5px;
+            border: none;
+            background-color: #0866ff;
+            color: white;
+            font-weight: 500;
+        }
+
+        #lgn:hover {
+            background-color: #2e7af3;
+            cursor: pointer;
+        }
+
+        .sign-up {
+            position: absolute;
+            bottom: 30px;
+            right: 50%;
+            transform: translateX(50%);
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+
+        .sign-up:hover {
+            color: #000;
+        }
+
+        #closeBtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 15px;
+            color: #4a4a4a;
+        }
+
+        #closebutton {
+            color: #000;
+        }
+    </style>
+</head>
+<body>
+    <button id="openBtn">로그인</button>
+    <div id="modal">
+        <div class="login">
+            <h2>Welcome!</h2>
+            <a href="#" id="closeBtn">닫기</a>
+
+            <form class="Lp" action="">
+                <input class="lp" placeholder="이메일 및 전화번호" type="email">
+                <input class="lp" placeholder="비밀번호" type="password">
+            </form>
+            <input id="lgn" type="submit" value="로그인">
+            <a class="sign-up" href="#">회원가입</a>
+        </div>
+    </div>
+    <script src="lgn.js"></script>
+</body>
+</html>
