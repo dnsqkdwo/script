@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            background-color: #0065F8;
+        }
+
+        .wrap {
+            width: 1000px;
+            margin: 0 auto;
+            text-align: center;
+            margin-top: 150px;
+        }
+
+        h1 {
+            color: aliceblue;
+            font-size: 35px;
+        }
+
+        #count {
+            font-size: 40px;
+            color: aliceblue;
+        }
+
+        button {
+            width: 90px;
+            height: 50px;
+            border: none;
+            background-color: #00CAFF;
+            border-radius: 15px;
+            color: aliceblue;
+            font-size: 20px;
+            font-weight: 600;
+            cursor: pointer;
+        }
+
+        .b-box {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 50px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>Welcome to Click Game!</h1>
+        <div id="count">+ 0 -</div>
+        <div class="b-box">
+            <button id="plusBtn">Click +</button>
+            <button id="minusBtn">Click -</button>
+        </div>
+    </div>
+    <script>
+        const count2 = document.getElementById("count");
+        const plusBtn = document.getElementById("plusBtn");
+        const minusBtn = document.getElementById("minusBtn");
+
+        let count = 0;
+
+        plusBtn.onclick = function() {
+            count++;
+            count2.textContent = count;
+        }
+
+        minusBtn.onclick = function() {
+            count--;
+            count2.textContent = count;
+        }
+    </script>
+</body>
+</html>
