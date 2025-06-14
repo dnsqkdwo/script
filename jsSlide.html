@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        img {
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+        }
+        .sBox {
+            width: 300vw;
+            display: flex;
+            transition: transform 0.5s ease; 
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div style="overflow: hidden">
+            <div class="sBox">
+                <img src="img/1.jpg" alt="@">
+                <img src="img/2.avif" alt="@">
+                <img src="img/3.jpg" alt="@">
+            </div>
+        </div>
+    </div> 
+    <button id="Btn">1</button>
+    <button id="bTn">2</button>
+    <button id="btN">3</button>
+
+    <script>
+        const Btn = document.getElementById("Btn");
+        const bTn = document.getElementById("bTn");
+        const btN = document.getElementById("btN");
+
+        const sBox = document.querySelector(".sBox");
+
+        bTn.addEventListener('click', function () {
+            sBox.style.transform = "translateX(-100vw)";
+        });
+
+        btN.addEventListener('click', function () {
+            sBox.style.transform = "translateX(-200vw)";
+        });
+
+        Btn.addEventListener('click', function () {
+            sBox.style.transform = "translateX(0vw)";
+        });
+    </script>
+</body>
+</html>
