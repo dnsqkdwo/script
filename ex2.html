@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>가짜 지도 위에 JSON 마커 표시</title>
+  <style>
+    #map {
+      width: 500px;
+      height: 400px;
+      background-color: #e3f2fd;
+      position: relative;
+      border: 2px solid #2196f3;
+    }
+    .marker {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color: red;
+      border-radius: 50%;
+      transform: translate(-50%, -50%);
+      cursor: pointer;
+    }
+    .label {
+      position: absolute;
+      background: white;
+      padding: 2px 4px;
+      border: 1px solid #ccc;
+      font-size: 12px;
+      transform: translate(-50%, -150%);
+      white-space: nowrap;
+    }
+  </style>
+</head>
+<body>
+  <h2>내 JSON 데이터로 만든 가짜 지도</h2>
+  <div id="map"></div>
+
+  <script>
+    // ✅ 직접 만든 JSON 데이터 (가상의 좌표 사용, 0~100 범위)
+    const 장소목록 = [
+      { 이름: "카페 모모", 종류: "카페", x: 20, y: 70 },
+      { 이름: "삼겹살하우스", 종류: "식당", x: 60, y: 30 },
+      { 이름: "중앙공원", 종류: "공원", x: 80, y: 60 }
+    ];
+
+    const map = document.getElementById("map");
+
+    장소목록.forEach(place => {
+      // 마커 생성
+      const marker = document.createElement("div");
+      marker.className = "marker";
+      marker.style.left = `${place.x}%`;
+      marker.style.top = `${place.y}%`;
+
+      // 라벨 생성
+      const label = document.createElement("div");
+      label.className = "label";
+      label.style.left = `${place.x}%`;
+      label.style.top = `${place.y}%`;
+      label.innerText = place.이름;
+
+      map.appendChild(marker);
+      map.appendChild(label);
+    });
+  </script>
+</body>
+</html>
